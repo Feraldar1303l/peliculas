@@ -1,0 +1,38 @@
+<br/>
+<h2>Alta pelicula</h2>
+
+<br/>
+
+<div class="col-md-7 col-lg-5
+">
+    <p>
+        <label>Titulo: </label>
+        <input type="text" class="form-control" [(ngModel)]="pelicula.titulo"/>
+    </p>
+    <p>
+        <label>Genero:</label>
+        <input type="text" class="form-control" [(ngModel)]="pelicula.genero"/>
+    </p>
+    <p>
+        <label>Año:</label>
+        <input type="text" class="form-control" [(ngModel)]="pelicula.anio"/>
+    </p>
+    <p>
+        <label>Director:</label>
+        <input type="text" class="form-control" [(ngModel)]="pelicula.director"/>
+    </p>
+    <p>
+        <label>Clasificación:</label>
+        <select [(ngModel)]="pelicula.clasif" class="form-control">
+            <option *ngFor="let tipo of tipos" value="{{tipo.id}}">
+                {{ tipo.descripcion }}
+            </option>
+        </select>
+    </p>
+
+    <p>
+        <button type="button" class="btn btn-primary" (click)="this.insertarPelicula()">
+            Insertar
+        </button>
+    </p>
+</div>

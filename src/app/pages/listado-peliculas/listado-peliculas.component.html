@@ -1,0 +1,29 @@
+<h2>Listado de Pelicula</h2>
+
+<div *ngIf="!peliculas.length">No hay ningun Pelicula</div>
+
+<table *ngIf="peliculas.length" class="table">
+
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Equipo</th>
+        <th>Apodo</th>
+        <th>Posicion</th>
+        <th>Tipo</th>
+    </tr>
+</thead>
+
+<tbody>
+    <tr *ngFor="let Pelicula of peliculas">
+        <td>{{ Pelicula.id }}</td>
+        <td>{{ Pelicula.titulo }}</td>
+        <td>{{ Pelicula.genero }}</td>
+        <td>{{ Pelicula.anio }}</td>
+        <td>{{ Pelicula.director }}</td>
+        <td>{{ Pelicula.clasif }}</td>
+    </tr>
+</tbody>
+
+</table>
